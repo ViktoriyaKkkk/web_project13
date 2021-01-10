@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row mb-3">
+      <div class="col-12">
+          <h1>{{title}}</h1>
+      </div>
+  </div>
+  <app-addform-worker (addWorker)="onAddWorker($event)"></app-addform-worker>
+  <app-table-worker [title]='"Программисты"' [editingUserId]="editingUserId" [workers]="getByType(myWorkerType.programmer)" (deleteWorker)='onDeleteWorker($event)' (editWorker)='onEditWorker($event)' (saveWorker)='onSaveWorker($event)'></app-table-worker>
+  <app-table-worker [title]='"Дизайнеры"' [editingUserId]="editingUserId" [workers]="getByType(myWorkerType.designer)" (deleteWorker)='onDeleteWorker($event)' (editWorker)='onEditWorker($event)' (saveWorker)='onSaveWorker($event)'></app-table-worker>
+  <app-table-worker [title]='"Рекламщики"' [editingUserId]="editingUserId" [workers]="getByType(myWorkerType.reclamer)" (deleteWorker)='onDeleteWorker($event)' (editWorker)='onEditWorker($event)' (saveWorker)='onSaveWorker($event)'></app-table-worker>
+  <app-table-worker [title]='"Мэнэджеры"' [editingUserId]="editingUserId" [workers]="getByType(myWorkerType.manager)" (deleteWorker)='onDeleteWorker($event)' (editWorker)='onEditWorker($event)' (saveWorker)='onSaveWorker($event)'></app-table-worker>
+  <app-editform-worker (editWorker)='onEditWorker($event)'></app-editform-worker>
+</div>
